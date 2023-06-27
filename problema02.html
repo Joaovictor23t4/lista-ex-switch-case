@@ -8,7 +8,14 @@
 </head>
 <body>
     <script>
-        
+        const num = Number(prompt(`Insira um número inteiro`));
+        const calculo = num % 2;
+        switch (calculo) {
+            case 0 :
+                alert(`${num} é par`);
+            default:
+                alert(`${num} é ímpar`); 
+        }
     </script>
 </body>
 </html>

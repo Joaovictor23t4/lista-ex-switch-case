@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações</title>
+</head>
+
+<body>
+    <script>
+        const num1 = Number(prompt(`Informe um número`));
+        const num2 = Number(prompt(`Informe outro número`));
+        const operacaoPergunta = prompt(`Informe qual operação você deseja realizar`).toUpperCase().replace("ã", "a").replace("ç" , "c");
+        let operacao;
+        let parImpar;
+        let positivoNegativo;
+        let inteiroDecimal;
+        let resposta;
+
+        switch (operacaoPergunta) {
+            case "MULTIPLICACAO":
+                operacao = num1 * num2;
+                parImpar = operacao % 2;
+                positivoNegativo = (operacao / 1 > 0) ? true : false;
+                inteiroDecimal = Number.isInteger(operacao);
+                resposta = `O resultado da sua multiplicação deu ${operacao}`;
+                break;
+            case "DIVISAO":
+                operacao = num1 / num2;
+                parImpar = operacao % 2;
+                positivoNegativo = (operacao / 1 > 0) ? true : false;
+                inteiroDecimal = Number.isInteger(operacao);
+                resposta = `O resultado da sua divisão deu ${operacao}`;
+                typeof inteiroDecimal
+                break;
+            case "ADICAO":
+                operacao = num1 + num2;
+                parImpar = operacao % 2;
+                positivoNegativo = (operacao / 1 > 0) ? true : false;
+                inteiroDecimal = Number.isInteger(operacao);
+                resposta = `O resultado da sua multiplicação deu ${operacao}`;
+                break;
+            case "SUBTRACAO":
+                operacao = num1 - num2;
+                parImpar = operacao % 2;
+                positivoNegativo = (operacao / 1 > 0) ? true : false;
+                inteiroDecimal = Number.isInteger(operacao);
+                resposta = `O resultado da sua multiplicação deu ${operacao}`;
+                break;
+            default:
+                alert(`Valor Inválido!`);
+        }
+        switch (parImpar) {
+            case 0:
+                resposta += `, é par`;
+                break;
+            default:
+                resposta += `, é ímpar`;
+                break;
+        }
+        switch (positivoNegativo) {
+            case true:
+                resposta += `, é positivo e `;
+                break;
+            default:
+                resposta += `, é negativo e`;
+                break;
+        }
+        switch (inteiroDecimal) {
+            case true:
+                resposta += ` inteiro.`;
+                break;
+            default:
+                resposta += ` decimal.`;
+                break;
+        }
+        alert(resposta)
+    </script>
+</body>
+
+</html>
