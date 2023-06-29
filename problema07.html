@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 7</title>
+</head>
+<body>
+    <script>
+        /*
+        //PROBLEMA: Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+        De acordo com as respostas, informe qual a estação do ano correspondente.
+        */
+    
+        //ENTRADA
+        const hemisfério = prompt(`Em qual hemisfério você está?`).toUpperCase();
+        const mes = prompt(`Em qual mês você está?`).toUpperCase();
+        //PROCESSAMENTO
+        switch (hemisfério) {
+            case "NORTE":
+                switch (mes) {
+                    case "JANEIRO":
+                    case "FEVEREIRO":
+                    case "MARÇO":
+                        alert(`Estação: Inverno`);
+                        break;
+                    case "ABRIL":
+                    case "MAIO":
+                    case "JUNHO":
+                        alert(`Estação: Primavera`);
+                        break;
+                    case "JULHO":
+                    case "AGOSTO":
+                    case "SETEMBRO":
+                        alert(`Estação: Verão`);
+                        break;
+                    case "OUTUBRO":
+                    case "NOVEMBRO":
+                    case "DEZEMBRO":
+                        alert(`Estação: Outono`);
+                        break;
+                    default:
+                        alert(`Mês inválido!`)
+                        break;
+                }
+                break;
+
+            case "SUL":
+            switch (mes) {
+                    case "JANEIRO":
+                    case "FEVEREIRO":
+                    case "MARÇO":
+                        alert(`Estação: Verão`);
+                        break;
+                    case "ABRIL":
+                    case "MAIO":
+                    case "JUNHO":
+                        alert(`Estação: Outono`);
+                        break;
+                    case "JULHO":
+                    case "AGOSTO":
+                    case "SETEMBRO":
+                        alert(`Estação: Inverno`);
+                        break;
+                    case "OUTUBRO":
+                    case "NOVEMBRO":
+                    case "DEZEMBRO":
+                        alert(`Estação: Primavera`);
+                        break;
+                    default:
+                        alert(`Mês inválido!`);
+                        break;
+        }
+
+        default:
+                alert(`Hemisfério Inválido!`);
+                break;
+    }
+        //SAÍDA
+    
+    </script>
+</body>
+</html>

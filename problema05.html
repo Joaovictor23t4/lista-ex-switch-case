@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 5</title>
+</head>
+<body>
+    <script>
+        /*
+        //PROBLEMA: Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+        - "Telefonou para a vítima?"
+        - "Esteve no local do crime?"
+        - "Mora perto da vítima?"
+        - "Devia para a vítima?"
+        - "Já trabalhou com a vítima?"
+        O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+        */
+    
+        //ENTRADA
+        const telefonou = Number(prompt(`Telefonou para a vítima?`));
+        const local = Number(prompt(`Esteve no local do crime?`));
+        const mora = Number(prompt(`Mora perto da vítima?`));
+        const devia = Number(prompt(`Devia para a vítima?`));
+        const trabalhou = Number(prompt(`Já trabalhou com a vítima?`));
+        const soma = telefonou + local + mora + devia + trabalhou;
+        switch (soma) {
+            case 2:
+                alert(`Suspeita`);
+                break;
+            case 3:
+            case 4:
+                alert(`Cúmplice`);
+            case 5:
+                alert(`Assasina`);
+            default:
+                alert(`Inocente`);
+                break;
+        }
+        
+        //SAÍDA
+    
+    </script>
+</body>
+</html>
